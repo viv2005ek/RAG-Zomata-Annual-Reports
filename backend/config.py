@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(Path(__file__).parent / ".env")
 load_dotenv(BASE_DIR / ".env")
 
-DOCUMENTS_DIR = BASE_DIR / "Documents"
+DOCUMENTS_DIR = (BASE_DIR / "data" / "Documents") if (BASE_DIR / "data" / "Documents").exists() else (BASE_DIR / "Documents")
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 

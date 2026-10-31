@@ -254,16 +254,14 @@ MPL Rag Product/
 ├── data/
 │   ├── bm25_index.pkl          # Serialized BM25 lexical inverted index
 │   ├── eval_results.json       # Cached benchmark evaluation scores
-│   └── extracted_chunks.json   # Pre-extracted & OCR-enriched document chunks
-│
-├── Documents/
-│   ├── Document1.pdf           # Eternal Ltd FY 2024-25 Annual Report (385 pages)
-│   └── Document2.pdf           # Eternal Ltd FY 2025-26 Annual Report (422 pages)
+│   ├── extracted_chunks.json   # Pre-extracted & OCR-enriched document chunks
+│   └── Documents/              # Source PDF Annual Reports
+│       ├── Document1.pdf       # Eternal Ltd FY 2024-25 Annual Report (385 pages)
+│       └── Document2.pdf       # Eternal Ltd FY 2025-26 Annual Report (422 pages)
 │
 ├── .gitignore                  # Production gitignore rules (safeguards .env everywhere)
 ├── ProjectDetails.xlsx         # Evaluation benchmark spreadsheet (Tab 4: Results)
-├── README.md                   # System documentation
-└── requirements.txt            # Root requirements definition
+└── README.md                   # System documentation
 ```
 
 ---
