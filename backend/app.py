@@ -1,11 +1,20 @@
 import os
 import sys
+import types
 from pathlib import Path
 
-# Ensure project root is in sys.path whether run from project root or inside backend/
-root_dir = Path(__file__).resolve().parent.parent
-if str(root_dir) not in sys.path:
-    sys.path.insert(0, str(root_dir))
+# Ensure project root & current dir are in sys.path
+current_dir = Path(__file__).resolve().parent
+root_dir = current_dir.parent
+for p in [str(current_dir), str(root_dir)]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+# Create a package alias 'backend' pointing to current directory if running in isolated container (e.g. Vercel)
+if "backend" not in sys.modules:
+    backend_pkg = types.ModuleType("backend")
+    backend_pkg.__path__ = [str(current_dir)]
+    sys.modules["backend"] = backend_pkg
 
 from typing import List, Optional, Dict, Any
 from fastapi import FastAPI, HTTPException
