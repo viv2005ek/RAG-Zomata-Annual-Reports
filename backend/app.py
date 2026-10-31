@@ -60,6 +60,10 @@ class QueryResponse(BaseModel):
     chunks_used: List[Dict[str, Any]] = []
 
 @app.get("/")
+@app.get("/api")
+@app.get("/api/index")
+@app.get("/api/index.py")
+@app.get("/app.py")
 def read_root():
     return {
         "service": "Eternal Ltd Annual Report RAG Engine",
@@ -72,6 +76,7 @@ def read_root():
     }
 
 @app.post("/api/query", response_model=QueryResponse)
+@app.post("/query", response_model=QueryResponse)
 def handle_query(req: QueryRequest):
     if not req.query or not req.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty.")
@@ -81,6 +86,7 @@ def handle_query(req: QueryRequest):
     return QueryResponse(**result)
 
 @app.post("/api/chat/stream")
+@app.post("/chat/stream")
 def handle_chat_stream(req: QueryRequest):
     import json
     import time
@@ -247,6 +253,7 @@ Please provide a clear, accurate, and short answer in plain English adhering to 
 
 
 @app.get("/api/benchmark")
+@app.get("/benchmark")
 def get_benchmark():
     """
     Runs the automated benchmark test suite across the 18 target questions
@@ -256,6 +263,7 @@ def get_benchmark():
     return results
 
 @app.get("/api/status")
+@app.get("/status")
 def get_status():
     engine = get_rag_engine()
     total_chunks = len(engine.retriever.chunks_by_id)
