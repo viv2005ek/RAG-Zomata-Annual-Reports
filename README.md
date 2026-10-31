@@ -217,13 +217,15 @@ MPL Rag Product/
 │   ├── app.py                  # FastAPI application & SSE streaming endpoints
 │   ├── config.py               # Central configuration & path management
 │   ├── evaluator.py            # Automated 18-question benchmark & Excel audit runner
-│   ├── extractor.py            # PyMuPDF + RapidOCR page extraction logic
 │   ├── guardrails.py           # Input sanitization, intent analysis & citation verification
-│   ├── ingest.py               # Vector embedding generator & Pinecone ingestion script
 │   ├── rag_engine.py           # Core RAG engine orchestrator & Groq LLM integration
 │   ├── requirements.txt        # Backend dependencies
 │   ├── retriever.py            # Hybrid Dense (Pinecone) + Sparse (BM25) retriever with RRF
-│   └── sync_eval.py            # Helper script to sync benchmark results
+│   └── ingestion/              # Offline ingestion & document extraction pipeline
+│       ├── __init__.py
+│       ├── extractor.py        # PyMuPDF + RapidOCR page extraction logic
+│       ├── ingest.py           # Vector embedding generator & Pinecone ingestion script
+│       └── sync_eval.py        # Helper script to sync benchmark results
 │
 ├── frontend/
 │   ├── .env.example            # Frontend environment variables template
@@ -295,8 +297,8 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 pip install -r backend/requirements.txt
 
 # 2. (Optional) Run extraction & ingestion if re-indexing from scratch
-python -m backend.extractor
-python -m backend.ingest
+python -m backend.ingestion.extractor
+python -m backend.ingestion.ingest
 
 # 3. Start the FastAPI server
 python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload

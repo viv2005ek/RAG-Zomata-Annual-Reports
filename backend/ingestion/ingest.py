@@ -1,5 +1,5 @@
 import sys
-from backend.extractor import load_or_extract_all_chunks
+from backend.ingestion.extractor import load_or_extract_all_chunks
 from backend.retriever import HybridRetriever
 
 def main():
