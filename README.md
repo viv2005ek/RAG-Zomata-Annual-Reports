@@ -20,7 +20,7 @@
 8. [Project Structure](#-project-structure)
 9. [Getting Started & Local Setup](#-getting-started--local-setup)
 10. [Automated 18-Question Benchmark & Audit](#-automated-18-question-benchmark--audit)
-11. [Deployment Guide (Vercel)](#-deployment-guide-vercel)
+11. [Production Deployment & Operational Architecture](#-production-deployment--operational-architecture)
 12. [Engineering Insights: What Worked vs. What Didn't](#-engineering-insights-what-worked-vs-what-didnt)
 
 ---
@@ -338,29 +338,25 @@ Results are saved to `data/eval_results.json` and written to Tab 4 (`Results`) o
 
 ---
 
-## ☁️ Deployment Guide (Vercel)
+## 🌐 Production Deployment & Operational Architecture
 
-### Deploying Backend to Vercel
-1. In the [Vercel Dashboard](https://vercel.com/new), import your repository: `viv2005ek/RAG-Zomata-Annual-Reports`.
-2. Configure project settings:
-   * **Project Name**: `eternal-rag-backend`
-   * **Root Directory**: `backend`
-   * **Framework Preset**: `Other`
-3. Add Environment Variables:
-   * `GROQ_API_KEY`: *(your Groq API key)*
-   * `PINECONE_API_KEY`: *(your Pinecone API key)*
-   * `PINECONE_INDEX_NAME`: `mpl-rag`
-4. Click **Deploy** and copy your production URL (e.g. `https://eternal-rag-backend.vercel.app`).
+The platform is designed to deploy cleanly as a decoupled cloud-native application across standard container runtimes (AWS ECS, GCP Cloud Run, Docker) or modern serverless edge networks:
 
-### Deploying Frontend to Vercel
-1. In Vercel, click **Add New > Project** and import the same repository.
-2. Configure project settings:
-   * **Project Name**: `eternal-rag-app`
-   * **Root Directory**: `frontend`
-   * **Framework Preset**: `Vite`
-3. Add Environment Variable:
-   * `VITE_API_BASE_URL`: The production URL from Step 1 (e.g. `https://eternal-rag-backend.vercel.app`).
-4. Click **Deploy**.
+### 1. Backend Service (Production ASGI)
+The FastAPI application is ASGI-compliant and production-hardened:
+* **Production Command**:
+  ```bash
+  gunicorn backend.app:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 120
+  ```
+* **Health & Liveness Probe**: `GET /` returns real-time service status, loaded document metadata, and active Pinecone index connectivity.
+* **Concurrency**: Pure non-blocking asynchronous event loop handling streaming SSE connections without thread pool starvation.
+
+### 2. Frontend Web Application (Static Single-Page Bundle)
+The React 19 application compiles to an optimized, tree-shaken static production bundle:
+* **Build Command**: `npm run build` (outputs to `frontend/dist/`).
+* **Deployment Target**: Can be served via Nginx, AWS S3 + CloudFront, Cloudflare Pages, or any modern edge CDN.
+* **Environment Configuration**: Set `VITE_API_BASE_URL` to point to the production API gateway domain.
+
 
 ---
 
