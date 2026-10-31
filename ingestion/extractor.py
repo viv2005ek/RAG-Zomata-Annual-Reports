@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 # Ensure project root is in sys.path
-root_dir = Path(__file__).resolve().parent.parent.parent
+root_dir = Path(__file__).resolve().parent.parent
 if str(root_dir) not in sys.path:
     sys.path.insert(0, str(root_dir))
 

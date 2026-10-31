@@ -81,23 +81,24 @@ Triggers the full 18-question evaluation benchmark and saves results to `backend
 
 ---
 
-## 🔄 Ingestion & Extraction Pipeline (`backend/ingestion/`)
+## 🔄 Offline Ingestion & Extraction Pipeline (`ingestion/`)
 
-The offline preparation scripts live in `backend/ingestion/` and can be re-run whenever new reports or documents are added:
+The offline preparation scripts live in the root `ingestion/` folder so they don't bloat the serverless deployment:
 
-1. **`backend/ingestion/extractor.py`**:
+1. **`ingestion/extractor.py`**:
    * Uses **PyMuPDF** for standard native text extraction.
    * Employs local ONNX **RapidOCR** heuristic on pages with <30 characters (extracting infographic text from pages 2–54 of Document B).
    * Generates `backend/data/extracted_chunks.json`.
 
-2. **`backend/ingestion/ingest.py`**:
+2. **`ingestion/ingest.py`**:
    * Generates 1024-dim dense embeddings using Pinecone Serverless Inference (`multilingual-e5-large`).
    * Builds the lexical token index and serializes it to `backend/data/bm25_index.pkl`.
 
 To re-run the entire extraction and indexing process:
 ```powershell
-python -m ingestion.extractor
-python -m ingestion.ingest
+pip install -r ingestion/requirements.txt
+python ingestion/extractor.py
+python ingestion/ingest.py
 ```
 
 ---
@@ -116,23 +117,20 @@ Results are saved to `backend/data/eval_results.json` and written to Tab 4 of `P
 
 ```
 backend/
-├── app.py                      # FastAPI application & SSE streaming endpoints
+├── api/
+│   └── index.py                # Vercel serverless function entrypoint
+├── app.py                      # FastAPI application, SSE streaming & path-rewrite middleware
 ├── config.py                   # Central path & environment configuration
 ├── evaluator.py                # 18-question evaluation benchmark runner
 ├── guardrails.py               # Input security & citation verification guardrails
 ├── rag_engine.py               # Groq LLM reasoning engine & context orchestrator
 ├── retriever.py                # Hybrid Dense (Pinecone) + Sparse (BM25) retriever
-├── requirements.txt            # Python dependencies
-├── vercel.json                 # Vercel serverless routing configuration
+├── requirements.txt            # Lightweight runtime serverless dependencies
+├── vercel.json                 # Vercel serverless rewrite configuration
+├── .vercelignore               # Serverless bundle exclusion rules
 ├── .env.example                # Environment variables template
-├── data/                       # Self-contained runtime data bundle
-│   ├── bm25_index.pkl          # Serialized BM25 lexical index
-│   ├── eval_results.json       # Cached benchmark results
-│   ├── extracted_chunks.json   # 807 extracted & OCR-enriched chunks
-│   └── Documents/              # Source PDF Annual Reports (FY24-25 & FY25-26)
-└── ingestion/                  # Offline document extraction & indexing
-    ├── __init__.py
-    ├── extractor.py            # PyMuPDF + RapidOCR extraction logic
-    ├── ingest.py               # Pinecone embedding & BM25 generation
-    └── sync_eval.py            # Benchmark synchronization utility
+└── data/                       # Self-contained runtime data bundle (~6MB)
+    ├── bm25_index.pkl          # Serialized BM25 lexical index (1.7MB)
+    ├── eval_results.json       # Cached benchmark results (40KB)
+    └── extracted_chunks.json   # 807 extracted & OCR-enriched chunks (4.3MB)
 ```

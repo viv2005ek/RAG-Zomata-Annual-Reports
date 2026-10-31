@@ -17,7 +17,7 @@ if "backend" not in sys.modules:
     sys.modules["backend"] = backend_pkg
 
 from typing import List, Optional, Dict, Any
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -38,6 +38,28 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.middleware("http")
+async def vercel_path_rewrite_middleware(request: Request, call_next):
+    # When Vercel Serverless Function rewrites to /api/index.py or /app.py, restore original URL path
+    curr_path = request.scope.get("path", "")
+    if curr_path in ["/api/index.py", "/api/index", "/app.py", "/index.py"] or curr_path.startswith("/api/index.py/"):
+        orig_uri = (
+            request.headers.get("x-forwarded-uri")
+            or request.headers.get("x-matched-path")
+            or request.headers.get("x-invoke-path")
+        )
+        if not orig_uri and "x-now-route-matches" in request.headers:
+            import urllib.parse
+            matches = urllib.parse.parse_qs(request.headers.get("x-now-route-matches", ""))
+            if "1" in matches and matches["1"]:
+                orig_uri = "/" + urllib.parse.unquote(matches["1"][0]).lstrip("/")
+        if orig_uri:
+            clean_path = orig_uri.split("?")[0]
+            if len(clean_path) > 1 and clean_path.endswith("/"):
+                clean_path = clean_path.rstrip("/")
+            request.scope["path"] = clean_path
+    return await call_next(request)
 
 # Initialize RAG Engine lazily
 rag_engine: Optional[RAGEngine] = None
@@ -61,7 +83,9 @@ class QueryResponse(BaseModel):
 
 @app.get("/")
 @app.get("/api")
+@app.get("/api/")
 @app.get("/api/index")
+@app.get("/api/index/")
 @app.get("/api/index.py")
 @app.get("/app.py")
 def read_root():
@@ -76,7 +100,9 @@ def read_root():
     }
 
 @app.post("/api/query", response_model=QueryResponse)
+@app.post("/api/query/", response_model=QueryResponse)
 @app.post("/query", response_model=QueryResponse)
+@app.post("/query/", response_model=QueryResponse)
 def handle_query(req: QueryRequest):
     if not req.query or not req.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty.")
@@ -86,7 +112,9 @@ def handle_query(req: QueryRequest):
     return QueryResponse(**result)
 
 @app.post("/api/chat/stream")
+@app.post("/api/chat/stream/")
 @app.post("/chat/stream")
+@app.post("/chat/stream/")
 def handle_chat_stream(req: QueryRequest):
     import json
     import time
@@ -253,7 +281,9 @@ Please provide a clear, accurate, and short answer in plain English adhering to 
 
 
 @app.get("/api/benchmark")
+@app.get("/api/benchmark/")
 @app.get("/benchmark")
+@app.get("/benchmark/")
 def get_benchmark():
     """
     Runs the automated benchmark test suite across the 18 target questions
@@ -263,7 +293,9 @@ def get_benchmark():
     return results
 
 @app.get("/api/status")
+@app.get("/api/status/")
 @app.get("/status")
+@app.get("/status/")
 def get_status():
     engine = get_rag_engine()
     total_chunks = len(engine.retriever.chunks_by_id)
