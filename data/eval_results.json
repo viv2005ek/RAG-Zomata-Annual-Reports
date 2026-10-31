@@ -1,0 +1,830 @@
+[
+  {
+    "num": 1,
+    "question": "Who is the Chairman of the company?",
+    "type": "Fact",
+    "answer": "The Chairman of Eternal Ltd. is **Sanjeev Bikhchandani** (appointed as Chairman effective 10 February 2026).  \nDeepinder Goyal was Chairman until his resignation on 1 February 2026.  \n\n*(Doc B, Page 174; Doc B, Page 172)*",
+    "doc_cited": "B",
+    "page_cited": "174, 172, 174",
+    "is_grounded": true,
+    "citations": [
+      [
+        "B",
+        174
+      ],
+      [
+        "B",
+        172
+      ],
+      [
+        "B",
+        174
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "B",
+        "viewer_page": 174,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 174]\nNumber of meetings held and attendance of the members\nDuring the financial year under review, the RMC met 2 (two) times. The dates of meetings held and attendance \n"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 173,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 173]\nNumber of meetings held and attendance of the members\nDuring the financial year under review, the SRC met 1 (one) time. The date of meeting held and attendance of \n"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 172,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 172]\nNumber of meetings held and attendance of the members\nDuring the financial year under review, the NRC met 4 (four) times. The dates of meetings held and attendance "
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 75,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 75]\nANNEXURE – II\nREPORT ON CSR ACTIVITIES\nBrief outline on CSR policy of the Company\nThe Company’s CSR policy reflects its commitment to creating sustainable value for "
+      }
+    ]
+  },
+  {
+    "num": 2,
+    "question": "What was total revenue in FY 2024-25 and FY 2025-26, and by what percentage did it change?",
+    "type": "Cross-year",
+    "answer": "**Total revenue (consolidated)**  \n\n| Fiscal year | Total revenue from operations (₹ crore) | Source |\n|-------------|----------------------------------------|--------|\n| FY 2024‑25 | 20,243 | (Doc A, Page 232) |\n| FY 2025‑26 | 54,364 | (Doc B, Page 248) |\n\n**Percentage change FY 2024‑25 → FY 2025‑26**\n\n\\[\n\\text{Growth \\%} = \\frac{54{,}364 - 20{,}243}{20{,}243} \\times 100\n= \\frac{34{,}121}{20{,}243} \\times 100\n\\approx 168.6\\%\n\\]\n\nSo revenue increased by **≈ 168.6 %** from FY 2024‑25 to FY 2025‑26.",
+    "doc_cited": "A, B",
+    "page_cited": "232, 248",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        232
+      ],
+      [
+        "B",
+        248
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 232,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 232]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n(INR crores)\nParticulars\nAs at  \nMarch 31, 2025 \nAs at "
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 43,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 43]\nCompany Overview  |  \n  |  Financial Statements\nStatutory Reports: MD&A\nConsolidated revenue from operations increased 67% YoY to INR 20,243 crore in FY25 driven by "
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 248,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 248]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolidated\nStatutory Reports\nCo"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 53,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 53]\nCompany Overview I Statutory Reports: MD&A I Financial Statements\nAdditional notes: Adjusted Revenue and Adjusted EBlTDA reconciliation\nINR crore\nFY26\nINR crore unle"
+      }
+    ]
+  },
+  {
+    "num": 3,
+    "question": "How many employees did the company have at the end of each year?",
+    "type": "Number",
+    "answer": "**Employees at the end of each fiscal year**\n\n| Fiscal year | Total employees (permanent + other) | Source |\n|-------------|-------------------------------------|--------|\n| FY 2024‑25 | 7,406 employees | (Doc A, Page 84) |\n| FY 2025‑26 | 6,995 employees | (Doc B, Page 91) |\n\n**Explanation**\n\n- Document A (FY 2024‑25) lists the total employees as 7,406 (permanent + other) at the end of the year.  \n- Document B (FY 2025‑26) lists the total employees as 6,995 (permanent + other) at the end of the year.\n\nThese figures are taken from the BRSR employee disclosures in each report.",
+    "doc_cited": "A, B",
+    "page_cited": "84, 91",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        84
+      ],
+      [
+        "B",
+        91
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 84,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 84]\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n80\n\t\nNote: As per the Indian Accounting Standards, end-users and delivery partners are considered as Et"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 80,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 80]\nFinancial Statements\nStatutory Reports: Board Report\nCompany Overview\nANNEXURE -IV\nParticulars of employees and related disclosure\nStatement of disclosure of remuner"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 91,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 91]\n87\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\nNote: As per the Indian Accounting Standards, end-users and delivery partners are considered as Eter"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 120,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 120]\n116\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n5.   Return to work and Retention rates of permanent employees and workers that took \nparental lea"
+      }
+    ]
+  },
+  {
+    "num": 4,
+    "question": "How did net profit change between the two years, and what reasons does the report give?",
+    "type": "Explanation",
+    "answer": "**Net profit (PAT) change FY25 → FY26**\n\n| FY | PAT (₹ crore) | Source |\n|----|---------------|--------|\n| FY25 | 527 | (Doc A, Page 16) |\n| FY26 | 366 | (Doc B, Page 56) |\n\n**Change**\n\n- Absolute change: 366 – 527 = ‑161 ₹ crore  \n- Percentage change:  \n  \\[\n  \\frac{366-527}{527}\\times100 = -30.6\\%\n  \\]  \n  (≈ ‑30.6 %)  \n\n**Reasons given in the reports**\n\n- The decline in PAT in FY26 is attributed mainly to a **higher depreciation and amortization expense in the quick‑commerce business**.  \n  - (Doc B, Page 56)  \n- In FY25, the report noted that PAT growth was lower than Adjusted EBITDA growth because of **increased depreciation and amortization in quick‑commerce and a provision for income tax on treasury income**.  \n  - (Doc A, Page 16)\n\n**Summary**\n\nNet profit fell by ₹161 crore (≈ ‑30.6 %) from FY25 to FY26, mainly because the quick‑commerce segment incurred higher depreciation and amortization costs.",
+    "doc_cited": "A, B",
+    "page_cited": "16, 56, 56, 16",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        16
+      ],
+      [
+        "B",
+        56
+      ],
+      [
+        "B",
+        56
+      ],
+      [
+        "A",
+        16
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 16,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 16]\nCompany Overview: Operational and financial highlights  |  Statutory Reports  |  Financial Statements\nConsolidated Adjusted EBITDA grew 3x YoY to INR 1,079 crore \n2\n"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 43,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 43]\nCompany Overview  |  \n  |  Financial Statements\nStatutory Reports: MD&A\nConsolidated revenue from operations increased 67% YoY to INR 20,243 crore in FY25 driven by "
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 56,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 56]\nFinancial results\nConsolidated revenue from operations grew 169% \nYoY to INR 54,364 crore in FY26 from INR 20,243 crore \nin FY25 primarily driven by shift to invento"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 17,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 17]\nCompany Overview: Operational and financial highlights I Statutory Reports I Financial Statements\nConsolidated Adjusted EBITDA grew 10% YoY despite accelerated\ninves"
+      }
+    ]
+  },
+  {
+    "num": 5,
+    "question": "Which business segment grew fastest between the two years?",
+    "type": "Comparison",
+    "answer": "**Quick commerce** grew the fastest between FY 2024‑25 and FY 2025‑26, with a year‑on‑year increase of **≈ 626 %**.\n\n| Segment | FY 25 revenue (₹ crore) | FY 26 revenue (₹ crore) | YoY growth % |\n|---------|------------------------|------------------------|--------------|\n| Quick commerce | 5,206 (Doc A, Page 43) | 37,779 (Doc B, Page 50) | ((37,779‑5,206)/5,206) × 100 ≈ 626 % |\n\n**Calculation**  \n`Growth % = ((FY26 – FY25) / FY25) × 100`  \n`= ((37,779 – 5,206) / 5,206) × 100 ≈ 626 %`.\n\nThus, quick commerce had the highest growth rate among the four business segments.",
+    "doc_cited": "A, B",
+    "page_cited": "43, 50",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        43
+      ],
+      [
+        "B",
+        50
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 43,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 43]\nCompany Overview  |  \n  |  Financial Statements\nStatutory Reports: MD&A\nConsolidated revenue from operations increased 67% YoY to INR 20,243 crore in FY25 driven by "
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 49,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 49]\nFinancial Statements\nStatutory Reports: Board Report\nCompany Overview\n4.\t B2B Supplies: B2B business supplying quality food \ningredients and other products to restau"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 16,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 16]\nCompany Overview: Operational and financial highlights I Statutory Reports I Financial Statements\nFY26 operational and financial highlights\nOverall Company\nConsolida"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 50,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 50]\nCompany Overview I Statutory Reports: MD&A I Financial Statements\nA.\nIncome\nConsolidated revenue from operations increased 169% YoY to INR 54,364 crore in FY26. The "
+      }
+    ]
+  },
+  {
+    "num": 6,
+    "question": "Who are the company's statutory auditors?",
+    "type": "Fact",
+    "answer": "The company’s statutory auditors are **Deloitte Haskins & Sells, Chartered Accountants** (Firm Registration Number 015125N).  \n- (Doc A, Page 57)  \n- (Doc B, Page 63)",
+    "doc_cited": "A, B",
+    "page_cited": "57, 63",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        57
+      ],
+      [
+        "B",
+        63
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 57,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 57]\nFinancial Statements\nStatutory Reports: Board Report\nCompany Overview\n Macro economics | Social & Governance \nEternal may face negative impact on its revenue \nand gr"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 63,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 63]\nsupply vectors. Furthermore, the Company is actively \nembedding advanced technological solutions—\nincluding deeper logistically focused automated \nsystems—to systema"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 187,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 187]\nANNEXURE – VI\nINDEPENDENT AUDITOR’S CERTIFICATE ON CORPORATE GOVERNANCE \nTo, \nthe Members of\nEternal Limited \n(Formerly known as Zomato Limited)\n1. This certificate"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 171,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 171]\nFinancial Statements\nStatutory Reports: CGR\nCompany Overview\nANNEXURE – VI\nINDEPENDENT AUDITOR’S CERTIFICATE ON CORPORATE GOVERNANCE\nTo, \nthe Members of\nEternal Lim"
+      }
+    ]
+  },
+  {
+    "num": 7,
+    "question": "Does the FY 2025-26 report show any FY 2024-25 figure differently from the FY 2024-25 report itself? Give one example.",
+    "type": "Cross-year",
+    "answer": "Yes.  \nThe FY 2025‑26 report restates the FY 2024‑25 “Complaints on POSH as a % of female employees/workers” figure as **1.17 %**, whereas the FY 2024‑25 report lists it as **0.87 %**.  \n\n- FY 2024‑25 report: 0.87 % (Doc A, Page 118)  \n- FY 2025‑26 report (restated): 1.17 % (Doc B, Page 135)  \n\nThis difference is noted in the FY 2025‑26 report’s restatement of the FY 2024‑25 ratio in line with BRSR guidance.",
+    "doc_cited": "A, B",
+    "page_cited": "118, 135",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        118
+      ],
+      [
+        "B",
+        135
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 118,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 118]\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n114\n6. \t Number of complaints on the following made by employees and workers: \nFY 2024-25\nFY 2023-24\nF"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 141,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 141]\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n137\nAPPENDIX I\nIdentified Sustainability Information subject to Reasonable Assurance\nPart A: BRSR Core"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 135,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 135]\n131\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n7.   Complaints filed under the Sexual Harassment of Women at Workplace (Prevention, Prohibition \n"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 114,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 114]\n110\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n6. Details of complaints with regard to conŦict of interest: \nFY 2025-26\nFY 2024-25\nNumber \nRemark"
+      }
+    ]
+  },
+  {
+    "num": 8,
+    "question": "What revenue does the company expect to earn in 2035?",
+    "type": "Forward-looking",
+    "answer": "Not found in the reports. The FY 2024‑25 and FY 2025‑26 annual reports do not contain any forward‑looking revenue projections for the year 2035.",
+    "doc_cited": "None",
+    "page_cited": "None",
+    "is_grounded": true,
+    "citations": [],
+    "chunks_used": [
+      {
+        "doc_id": "B",
+        "viewer_page": 248,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 248]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolidated\nStatutory Reports\nCo"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 232,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 232]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n(INR crores)\nParticulars\nAs at  \nMarch 31, 2025 \nAs at "
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 53,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 53]\nCompany Overview I Statutory Reports: MD&A I Financial Statements\nAdditional notes: Adjusted Revenue and Adjusted EBlTDA reconciliation\nINR crore\nFY26\nINR crore unle"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 361,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 361]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\n18\t Revenue from operations\n(INR crores)\nParticulars\nFor "
+      }
+    ]
+  },
+  {
+    "num": 9,
+    "question": "What was the CSR (Corporate Social Responsibility) expenditure in FY 2024-25 and FY 2025-26?",
+    "type": "Cross-year",
+    "answer": "**CSR expenditure**\n\n| Fiscal year | CSR expenditure reported | Source |\n|-------------|--------------------------|--------|\n| FY 2024‑25 | Not applicable – no CSR spending was disclosed. | (Doc A, Page 70) |\n| FY 2025‑26 | Not applicable – no CSR spending was disclosed. | (Doc B, Page 76) |\n\nThe reports state that because the company’s average net profit was nil, the CSR obligations and related expenditures were not applicable for both years.",
+    "doc_cited": "A, B",
+    "page_cited": "70, 76",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        70
+      ],
+      [
+        "B",
+        76
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 69,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 69]\nFinancial Statements\nStatutory Reports: Board Report\nCompany Overview\n\nANNEXURE -II\nREPORT ON CSR ACTIVITIES\n1. Brief outline on CSR policy of the Company\nThe CSR po"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 70,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 70]\nFinancial Statements\nStatutory Reports: Board Report\nCompany Overview\n6.\t (a)\t Amount spent on CSR projects (both ongoing project and other than ongoing project): No"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 76,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 76]\nWeb-link(s) where composition of CSR committee, CSR policy and CSR projects \napproved by the Board are disclosed on the website of the Company\nComposition of CSR com"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 394,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 394]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\n(c)\tReconciliation of accounting profit and tax expense:\n"
+      }
+    ]
+  },
+  {
+    "num": 10,
+    "question": "What was Blinkit's Net Order Value (NOV) / Gross Order Value (GOV) in FY 2024-25 vs FY 2025-26?",
+    "type": "Comparison",
+    "answer": "**Blinkit (Quick Commerce) Net Order Value (NOV)**\n\n| Fiscal Year | Quick Commerce / Blinkit NOV (₹ crore) | YoY Growth % | Source |\n|-------------|----------------------------------------|--------------|--------|\n| FY 2024-25  | 22,371 | +113% | (Doc A, Page 20) |\n| FY 2025-26  | 48,567 | +117% | (Doc B, Page 22) |\n\n**Percentage Growth Calculation:**\n((48,567 - 22,371) / 22,371) * 100 = (26,196 / 22,371) * 100 ≈ +117.1% YoY\n\n*Note: In FY26, Quick commerce became Eternal's largest B2C business by NOV, surpassing food delivery.*",
+    "doc_cited": "A, B",
+    "page_cited": "20, 22",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        20
+      ],
+      [
+        "B",
+        22
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 20,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 20]\nCompany Overview: Operational and financial highlights  |  Statutory Reports  |  Financial Statements\nB. Quick commerce\nNOV grew 113% YoY in FY25\n1\nNOV grew 113% YoY"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 27,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 27]\nCompany Overview: Operational and financial highlights  |  Statutory Reports  |  Financial Statements\nNote:P\nMI FY23 numbers shown above are unaudited, MIS based num"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 22,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 22]\nCompany Overview: Operational and financial highlights I Statutory Reports I Financial Statements\nB. Quick commerce\nQuick commerce became our largest B2C business in"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 34,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 34]\nCompany Overview: Glossary I Statutory Reports I Financial Statements\nFood delivery (continued)\nTerm\nDescription\nDefined as Revenue(+)actual customer delivery charge"
+      }
+    ]
+  },
+  {
+    "num": 11,
+    "question": "Where is the registered office of the company located?",
+    "type": "Fact",
+    "answer": "The registered office of Eternal Limited is located at **Ground Floor – 12A, 94, Meghdoot, Nehru Place, New Delhi – 110019**.  \n( Doc B, Page 181 ) ( Doc B, Page 212 ) ( Doc A, Page 308 )",
+    "doc_cited": "A, B",
+    "page_cited": "181, 212, 308, 181, 212",
+    "is_grounded": true,
+    "citations": [
+      [
+        "B",
+        181
+      ],
+      [
+        "B",
+        212
+      ],
+      [
+        "A",
+        308
+      ],
+      [
+        "B",
+        181
+      ],
+      [
+        "A",
+        212
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "B",
+        "viewer_page": 181,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 181]\nDematerialisation of shares and liquidity \nAs mandated by the SEBI, Equity Shares of the \nCompany can be transferred/ traded only in \ndematerialised form.\nAs on Mar"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 326,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 326]\nMaterial Accounting Policies to the Standalone \nFinancial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\n1.\t Corporate Information\nEternal"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 308,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 308]\nMaterial Accounting Policies to the Standalone \nFinancial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n1.\t Corporate Information\nEternal"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 212,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 212]\nMaterial  Accounting Policies to the \nConsolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolid"
+      }
+    ]
+  },
+  {
+    "num": 12,
+    "question": "What was the Basic Earnings Per Share (EPS) in FY 2024-25 and FY 2025-26?",
+    "type": "Number",
+    "answer": "**Basic Earnings Per Share (EPS)**  \n\n| Fiscal Year | Consolidated Basic EPS | Standalone Basic EPS | Source |\n|-------------|------------------------|----------------------|--------|\n| FY 2024‑25 | ₹0.60 | ₹2.22 | (Doc A, Page 236) – consolidated; (Doc A, Page 347) – standalone |\n| FY 2025‑26 | ₹0.40 | ₹2.91 | (Doc B, Page 253) – consolidated; (Doc B, Page 366) – standalone |\n\n*The figures above are taken directly from the respective annual reports. No additional calculations were required.*",
+    "doc_cited": "A, B",
+    "page_cited": "236, 347, 253, 366, 236, 253",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        236
+      ],
+      [
+        "A",
+        347
+      ],
+      [
+        "B",
+        253
+      ],
+      [
+        "B",
+        366
+      ],
+      [
+        "A",
+        236
+      ],
+      [
+        "B",
+        253
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 236,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 236]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n(INR crores)\nParticulars\nFor the year ended  \nMarch 31,"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 347,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 347]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n27\t Exceptional items\n(INR crores)\nParticulars\nFor the ye"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 253,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 253]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolidated\nStatutory Reports\nCo"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 366,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 366]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\n-\t\nDuring the previous year ended March 31, 2025, the Com"
+      }
+    ]
+  },
+  {
+    "num": 13,
+    "question": "Who is the Chief Executive Officer (CEO) and Managing Director of Eternal Ltd?",
+    "type": "Fact",
+    "answer": "**Chief Executive Officer (CEO)**  \n- Albinder Singh Dhindsa (appointed Feb 1 2026) – listed as “Chief Executive Officer” in the Board of Directors section. (Doc B, Page 48)  \n\n**Managing Director**  \n- The Managing Director position is currently vacant; the previous Managing Director, Deepinder Goyal, resigned effective Feb 1 2026. (Doc B, Page 58)  \n\n*Note:* Deepinder Goyal had held the combined role of Managing Director & CEO until",
+    "doc_cited": "B",
+    "page_cited": "48, 58",
+    "is_grounded": true,
+    "citations": [
+      [
+        "B",
+        48
+      ],
+      [
+        "B",
+        58
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "B",
+        "viewer_page": 58,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 58]\nFurther, Deepinder Goyal (DIN: 02613583) resigned \nas Director, Managing Director & Chief Executive \nOfficer of the Company, effective from the close of \nbusiness ho"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 176,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 176]\nComposition\nName of member \nPosition \nCategory\nKaushik Dutta\nChairman\nIndependent Director\nDeepinder Goyal1\nMember\nManaging Director & Chief Executive Officer\nSanje"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 88,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 88]\nAverage percentile increase already made in the salaries of employees other than the managerial personnel \nin the last financial year and its comparison with the per"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 48,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 48]\nCompany Overview: Corporate information I Statutory Reports I Financial Statements\nCorporate information\nBoard of Directors\nMr. Kaushik Dutta\nMr. Deepinder Goyal\nMr."
+      }
+    ]
+  },
+  {
+    "num": 14,
+    "question": "What dividend per share was recommended by the Board of Directors for FY 2025-26?",
+    "type": "Fact",
+    "answer": "The Board of Directors did **not recommend any dividend** for the financial year ended March 31, 2026.\n\nAs stated in the Directors' Report:\n\"During the financial year under review, the Board has not recommended any dividend.\" (Doc B, Page 57)",
+    "doc_cited": "B",
+    "page_cited": "57",
+    "is_grounded": true,
+    "citations": [
+      [
+        "B",
+        57
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 50,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 50]\nFinancial Statements\nStatutory Reports: Board Report\nCompany Overview\nthe audited financial statements, including the \nconsolidated financial statements and related "
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 354,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 354]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\nThe following tables list the inputs to the models used f"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 57,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 57]\nIn accordance with the Section 129 of the Companies \nAct, 2013 read with rules framed thereunder (“Act”), \na statement containing the salient features of the \nfinanc"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 243,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 243]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolidated\nStatutory Reports\nCo"
+      }
+    ]
+  },
+  {
+    "num": 15,
+    "question": "What were the total Employee Benefits Expenses in FY 2024-25 and FY 2025-26?",
+    "type": "Cross-year",
+    "answer": "**Employee Benefits Expense – Consolidated vs. Standalone**\n\n| Fiscal Year | Consolidated (₹ crores) | Source | Standalone (₹ crores) | Source |\n|-------------|------------------------|--------|-----------------------|--------|\n| FY 2024‑25 (year ended 31 Mar 2025) | 2,558 | (Doc A, Page 23) | 1,266 | (Doc A, Page 299) |\n| FY 2025‑26 (year ended 31 Mar",
+    "doc_cited": "A",
+    "page_cited": "23, 299",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        23
+      ],
+      [
+        "A",
+        299
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 235,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 235]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n23\tEmployee benefits expense\n(INR crores)\nParticulars\nF"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 299,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 299]\nStandalone Statement of Profit and Loss\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n (INR crores) \nParticulars\nNote\nFor the year ended  \nMarch 31,"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 317,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 317]\nStandalone Statement of Profit and Loss\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\n (INR crores) \nParticulars\nNote\nFor the year ended  \nMarch 31,"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 251,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 251]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolidated\nStatutory Reports\nCo"
+      }
+    ]
+  },
+  {
+    "num": 16,
+    "question": "Did Eternal Ltd complete any major business acquisition during FY 2024-25?",
+    "type": "Fact",
+    "answer": "Yes.  \nEternal Ltd completed the acquisition of Orbgen Technologies Pvt Ltd and Wasteland Entertainment Pvt Ltd (the entertainment‑ticketing business) from Paytm (One 97 Communications) on 27 August 2024, which falls within FY 2024‑25.  \n\n- Document A (FY 2024‑25) – page 15: “During FY25, the Company acquired the entertainment ticketing business from Paytm… Consolidation of the acquired business in the books of the Company is from 27‑Aug‑24 onwards.” (Doc A, Page 15)  \n- Document B (FY 2025‑26) – page 253: “On August 27, 2024, Eternal Limited completed the acquisition of Orbgen Technologies Private Limited and Wasteland Entertainment Private Limited.” (Doc B, Page 253)",
+    "doc_cited": "A, B",
+    "page_cited": "15, 253",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        15
+      ],
+      [
+        "B",
+        253
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 15,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 15]\nCompany Overview: Operational and financial highlights  |  Statutory Reports  |  Financial Statements\nFY25 operational and financial highlights\nOverall Company\nNote:"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 42,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 42]\nCompany Overview  |  \n  |  Financial Statements\nStatutory Reports: MD&A\nConsolidated statement of profit and loss\nINR crore\nParticulars\nFY25\nFY24\nA. Income\nRevenue f"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 253,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 253]\nNotes to the Consolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolidated\nStatutory Reports\nCo"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 212,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 212]\nMaterial  Accounting Policies to the \nConsolidated Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nFinancial Statements: Consolid"
+      }
+    ]
+  },
+  {
+    "num": 17,
+    "question": "What was the total Standalone revenue from operations in FY 2024-25 and FY 2025-26?",
+    "type": "Cross-year",
+    "answer": "**Standalone revenue from operations**\n\n| Fiscal year | Revenue (₹ crores) | Source |\n|-------------|--------------------|--------|\n| FY 2024‑25 | 8,617 | (Doc A, Page 342) |\n| FY 2025‑26 | 10,899 | (Doc B, Page 361) |\n\nThese figures are taken from the “Notes to the Standalone Financial Statements” sections of the respective annual reports.",
+    "doc_cited": "A, B",
+    "page_cited": "342, 361",
+    "is_grounded": true,
+    "citations": [
+      [
+        "A",
+        342
+      ],
+      [
+        "B",
+        361
+      ]
+    ],
+    "chunks_used": [
+      {
+        "doc_id": "A",
+        "viewer_page": 342,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 342]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\n19\t Revenue from operations\n(INR crores)\nParticulars\nFor "
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 124,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 124]\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n120\n6.\t Please provide details of air emissions (other than GHG emissions) by the entity, in the follo"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 361,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 361]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\n18\t Revenue from operations\n(INR crores)\nParticulars\nFor "
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 137,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 137]\n133\nFinancial Statements\nStatutory Reports: BRSR\nCompany Overview\n4. Details on assessment of value chain partners:\n% of value chain partners\n (by value of business"
+      }
+    ]
+  },
+  {
+    "num": 18,
+    "question": "What is the expected stock market capitalization or share price of the company in year 2040?",
+    "type": "Unanswerable",
+    "answer": "Not found in the reports.  \nThe FY 2024‑25 and FY 2025‑26 annual reports do not contain any forward‑looking projections or estimates for the company’s market capitalization or share price for the year 2040.",
+    "doc_cited": "None",
+    "page_cited": "None",
+    "is_grounded": true,
+    "citations": [],
+    "chunks_used": [
+      {
+        "doc_id": "B",
+        "viewer_page": 373,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 373]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nThe following tables list the inputs to the models used f"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 57,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 57]\nIn accordance with the Section 129 of the Companies \nAct, 2013 read with rules framed thereunder (“Act”), \na statement containing the salient features of the \nfinanc"
+      },
+      {
+        "doc_id": "B",
+        "viewer_page": 380,
+        "fiscal_year": "FY 2025-26",
+        "preview": "[Document B: FY 2025-26 | Page 380]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2026\nCIN : L93030DL2010PLC198141\nSensitivity analysis for the year ended March 31, 2025 :\n"
+      },
+      {
+        "doc_id": "A",
+        "viewer_page": 361,
+        "fiscal_year": "FY 2024-25",
+        "preview": "[Document A: FY 2024-25 | Page 361]\nNotes to the Standalone Financial Statements\nfor the year ended March 31, 2025\nCIN : L93030DL2010PLC198141\nSensitivity analysis for the year ended March 31, 2024 is"
+      }
+    ]
+  }
+]

@@ -1,0 +1,214 @@
+/* Scoped Markdown Rendering Styles: Solar Amber & Titanium Gold Luxury Terminal */
+
+.assistant-markdown {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #E4E4E7;
+  word-break: break-word;
+}
+
+.assistant-markdown p {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+  color: rgba(244, 244, 245, 0.92);
+}
+
+.assistant-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.assistant-markdown h1,
+.assistant-markdown h2,
+.assistant-markdown h3,
+.assistant-markdown h4 {
+  color: #FAF9F6;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.assistant-markdown h2 {
+  font-size: 1.15rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+  color: #FDE047;
+}
+
+.assistant-markdown h3 {
+  font-size: 1.02rem;
+  color: #FBBF24;
+}
+
+.assistant-markdown strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.assistant-markdown em {
+  color: #D4D4D8;
+  font-style: italic;
+}
+
+.assistant-markdown ul,
+.assistant-markdown ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.85rem;
+  padding-left: 1.35rem;
+}
+
+.assistant-markdown li {
+  margin-bottom: 0.35rem;
+  color: #D4D4D8;
+}
+
+.assistant-markdown ul > li::marker {
+  color: #F59E0B;
+}
+
+/* Inline code with warm gold accent */
+.assistant-markdown code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: rgba(245, 158, 11, 0.12);
+  color: #FDE047;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Fenced code block container */
+.assistant-markdown pre {
+  background: #08080A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  position: relative;
+  margin: 0.9rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.assistant-markdown pre code {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: #FAF9F6;
+  line-height: 1.5;
+}
+
+/* Tables: Striped, sticky header, horizontal scroll on overflow */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  background: rgba(14, 15, 19, 0.85);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+.assistant-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.assistant-markdown thead {
+  position: sticky;
+  top: 0;
+  background: rgba(24, 25, 32, 0.96);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.assistant-markdown thead th {
+  padding: 0.65rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FBBF24;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+  white-space: nowrap;
+}
+
+.assistant-markdown tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.assistant-markdown tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.assistant-markdown tbody tr:hover {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.assistant-markdown td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #E4E4E7;
+}
+
+/* Numeric column auto right-align heuristic */
+.assistant-markdown td.num-col,
+.assistant-markdown th.num-col {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+
+/* Total row highlight */
+.assistant-markdown tr.total-row {
+  font-weight: 600;
+  background: rgba(245, 158, 11, 0.15) !important;
+  border-top: 2px solid rgba(245, 158, 11, 0.5);
+  color: #FAF9F6;
+}
+
+/* Blockquote with warm amber accent bar */
+.assistant-markdown blockquote {
+  margin: 0.85rem 0;
+  padding: 0.6rem 1rem;
+  background: rgba(245, 158, 11, 0.04);
+  border-left: 3px solid #F59E0B;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: #D4D4D8;
+}
+
+.assistant-markdown hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1.25rem 0;
+}
+
+/* Citation superscript badge */
+.citation-sup {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.45rem;
+  margin: 0 0.2rem;
+  border-radius: 0.35rem;
+  background: rgba(245, 158, 11, 0.18);
+  color: #FDE047;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.15em;
+}
+
+.citation-sup:hover {
+  background: rgba(245, 158, 11, 0.35);
+  color: #FFFFFF;
+  border-color: rgba(245, 158, 11, 0.8);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.45);
+  transform: translateY(-1px);
+}
