@@ -41,24 +41,35 @@ app.add_middleware(
 
 @app.middleware("http")
 async def vercel_path_rewrite_middleware(request: Request, call_next):
-    # When Vercel Serverless Function rewrites to /api/index.py or /app.py, restore original URL path
-    curr_path = request.scope.get("path", "")
-    if curr_path in ["/api/index.py", "/api/index", "/app.py", "/index.py"] or curr_path.startswith("/api/index.py/"):
-        orig_uri = (
-            request.headers.get("x-forwarded-uri")
-            or request.headers.get("x-matched-path")
-            or request.headers.get("x-invoke-path")
-        )
-        if not orig_uri and "x-now-route-matches" in request.headers:
-            import urllib.parse
-            matches = urllib.parse.parse_qs(request.headers.get("x-now-route-matches", ""))
-            if "1" in matches and matches["1"]:
-                orig_uri = "/" + urllib.parse.unquote(matches["1"][0]).lstrip("/")
-        if orig_uri:
-            clean_path = orig_uri.split("?")[0]
-            if len(clean_path) > 1 and clean_path.endswith("/"):
-                clean_path = clean_path.rstrip("/")
-            request.scope["path"] = clean_path
+    # When Vercel Serverless Function rewrites to /api/index.py, restore original URL path
+    vercel_path = request.query_params.get("__vercel_path") or request.query_params.get("path")
+    if vercel_path is not None:
+        p = "/" + vercel_path.strip("/")
+        request.scope["path"] = p if len(p) > 1 else "/"
+    else:
+        curr_path = request.scope.get("path", "")
+        if curr_path in ["/api/index.py", "/api/index", "/app.py", "/index.py"] or curr_path.startswith("/api/index.py/"):
+            orig_uri = (
+                request.headers.get("x-forwarded-uri")
+                or request.headers.get("x-original-uri")
+                or request.headers.get("x-matched-path")
+                or request.headers.get("x-invoke-path")
+            )
+            if not orig_uri and "x-now-route-matches" in request.headers:
+                import urllib.parse
+                matches = urllib.parse.parse_qs(request.headers.get("x-now-route-matches", ""))
+                if "1" in matches and matches["1"]:
+                    orig_uri = "/" + urllib.parse.unquote(matches["1"][0]).lstrip("/")
+            if orig_uri:
+                clean_path = orig_uri.split("?")[0].strip("/")
+                p = "/" + clean_path
+                request.scope["path"] = p if len(p) > 1 else "/"
+
+    # Normalize trailing slashes
+    cur = request.scope.get("path", "")
+    if len(cur) > 1 and cur.endswith("/"):
+        request.scope["path"] = cur.rstrip("/")
+
     return await call_next(request)
 
 # Initialize RAG Engine lazily
