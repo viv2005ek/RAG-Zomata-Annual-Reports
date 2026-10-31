@@ -3,11 +3,8 @@ import pickle
 from typing import List, Dict, Any, Optional
 from pinecone import Pinecone
 from rank_bm25 import BM25Okapi
-try:
-    from flashrank import Ranker, RerankRequest
-except ImportError:
-    Ranker = None
-    RerankRequest = None
+Ranker = None
+RerankRequest = None
 from backend.config import (
     PINECONE_API_KEY, 
     PINECONE_INDEX_NAME, 

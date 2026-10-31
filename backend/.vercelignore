@@ -1,0 +1,6 @@
+# Vercel Serverless Function Ignore File
+# Exclude raw 58MB PDFs (chunks and embeddings are already extracted in data/)
+data/Documents/
+.venv/
+__pycache__/
+*.pyc
