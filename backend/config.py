@@ -2,14 +2,19 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-# Load .env from backend directory (and fallback to root if present)
-load_dotenv(Path(__file__).parent / ".env")
-load_dotenv(BASE_DIR / ".env")
+BACKEND_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BACKEND_DIR.parent
 
-DOCUMENTS_DIR = (BASE_DIR / "data" / "Documents") if (BASE_DIR / "data" / "Documents").exists() else (BASE_DIR / "Documents")
-DATA_DIR = BASE_DIR / "data"
+# Load .env from backend directory (and fallback to root if present)
+load_dotenv(BACKEND_DIR / ".env")
+load_dotenv(PROJECT_ROOT / ".env")
+
+# Locate data directory (self-contained within backend/data for Vercel, fallback to root)
+DATA_DIR = (BACKEND_DIR / "data") if (BACKEND_DIR / "data").exists() else (PROJECT_ROOT / "data")
 DATA_DIR.mkdir(exist_ok=True)
+
+# Locate Documents directory
+DOCUMENTS_DIR = (DATA_DIR / "Documents") if (DATA_DIR / "Documents").exists() else (PROJECT_ROOT / "Documents")
 
 # Document Paths
 DOC_A_PATH = DOCUMENTS_DIR / "Document1.pdf"  # FY 2024-25 (385 pages)
@@ -32,4 +37,4 @@ GROQ_FALLBACK_MODEL = "openai/gpt-oss-120b"
 CHUNKS_CACHE_FILE = DATA_DIR / "extracted_chunks.json"
 BM25_INDEX_FILE = DATA_DIR / "bm25_index.pkl"
 EVAL_RESULTS_FILE = DATA_DIR / "eval_results.json"
-EXCEL_FILE = BASE_DIR / "ProjectDetails.xlsx"
+EXCEL_FILE = (PROJECT_ROOT / "ProjectDetails.xlsx") if (PROJECT_ROOT / "ProjectDetails.xlsx").exists() else (BACKEND_DIR / "ProjectDetails.xlsx")

@@ -1,8 +1,15 @@
 import os
 import json
 import unicodedata
+import sys
 from pathlib import Path
 from typing import List, Dict, Any
+
+# Ensure project root is in sys.path
+root_dir = Path(__file__).resolve().parent.parent.parent
+if str(root_dir) not in sys.path:
+    sys.path.insert(0, str(root_dir))
+
 import pymupdf
 from rapidocr_onnxruntime import RapidOCR
 from backend.config import DOC_A_PATH, DOC_B_PATH, CHUNKS_CACHE_FILE

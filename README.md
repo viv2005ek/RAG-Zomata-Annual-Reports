@@ -221,6 +221,15 @@ MPL Rag Product/
 │   ├── rag_engine.py           # Core RAG engine orchestrator & Groq LLM integration
 │   ├── requirements.txt        # Backend dependencies
 │   ├── retriever.py            # Hybrid Dense (Pinecone) + Sparse (BM25) retriever with RRF
+│   ├── vercel.json             # Vercel serverless routing configuration
+│   ├── README.md               # Dedicated backend architecture documentation
+│   ├── data/                   # Self-contained runtime data & index bundle
+│   │   ├── bm25_index.pkl      # Serialized BM25 lexical inverted index
+│   │   ├── eval_results.json   # Cached benchmark evaluation scores
+│   │   ├── extracted_chunks.json # Pre-extracted & OCR-enriched document chunks
+│   │   └── Documents/          # Source PDF Annual Reports
+│   │       ├── Document1.pdf   # Eternal Ltd FY 2024-25 Annual Report (385 pages)
+│   │       └── Document2.pdf   # Eternal Ltd FY 2025-26 Annual Report (422 pages)
 │   └── ingestion/              # Offline ingestion & document extraction pipeline
 │       ├── __init__.py
 │       ├── extractor.py        # PyMuPDF + RapidOCR page extraction logic
@@ -232,6 +241,7 @@ MPL Rag Product/
 │   ├── index.html              # HTML5 entrypoint with Google Fonts
 │   ├── package.json            # Node.js dependencies & scripts
 │   ├── vite.config.js          # Vite configuration with proxy settings
+│   ├── README.md               # Dedicated frontend architecture documentation
 │   └── src/
 │       ├── App.jsx             # Main application component
 │       ├── index.css           # Global typography & animation styles
@@ -251,17 +261,9 @@ MPL Rag Product/
 │           ├── markdown.css    # Table styling, callouts, blockquotes
 │           └── theme.css       # Obsidian & Emerald color variables
 │
-├── data/
-│   ├── bm25_index.pkl          # Serialized BM25 lexical inverted index
-│   ├── eval_results.json       # Cached benchmark evaluation scores
-│   ├── extracted_chunks.json   # Pre-extracted & OCR-enriched document chunks
-│   └── Documents/              # Source PDF Annual Reports
-│       ├── Document1.pdf       # Eternal Ltd FY 2024-25 Annual Report (385 pages)
-│       └── Document2.pdf       # Eternal Ltd FY 2025-26 Annual Report (422 pages)
-│
 ├── .gitignore                  # Production gitignore rules (safeguards .env everywhere)
 ├── ProjectDetails.xlsx         # Evaluation benchmark spreadsheet (Tab 4: Results)
-└── README.md                   # System documentation
+└── README.md                   # Master system documentation
 ```
 
 ---
@@ -291,15 +293,24 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 
 ### 3. Backend Setup & Startup
 ```powershell
-# 1. Install dependencies
-pip install -r backend/requirements.txt
+# 1. Navigate to backend directory
+cd backend
 
-# 2. (Optional) Run extraction & ingestion if re-indexing from scratch
-python -m backend.ingestion.extractor
-python -m backend.ingestion.ingest
+# 2. Activate the virtual environment
+# On Windows (PowerShell):
+.\.venv\Scripts\Activate.ps1
+# On Linux/macOS:
+source .venv/bin/activate
 
-# 3. Start the FastAPI server
-python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. (Optional) Run extraction & ingestion if re-indexing from scratch
+python -m ingestion.extractor
+python -m ingestion.ingest
+
+# 5. Start the FastAPI server
+python -m uvicorn app:app --host 127.0.0.1 --port 8000 --reload
 ```
 The interactive API documentation is available at `http://127.0.0.1:8000/docs`.
 
@@ -326,7 +337,8 @@ The system includes a benchmark runner in `backend/evaluator.py` covering:
 
 To run the automated audit:
 ```powershell
-python -m backend.evaluator
+cd backend
+python evaluator.py
 ```
 
 This evaluates:

@@ -1,4 +1,12 @@
 import os
+import sys
+from pathlib import Path
+
+# Ensure project root is in sys.path whether run from project root or inside backend/
+root_dir = Path(__file__).resolve().parent.parent
+if str(root_dir) not in sys.path:
+    sys.path.insert(0, str(root_dir))
+
 from typing import List, Optional, Dict, Any
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
